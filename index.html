@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1990s Web Portfolio</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: serif, sans-serif;
+        text-align: center;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+        grid-gap: 20px;
+        align-items: start; /* Align items to the start of the grid container */
+        justify-items: center;
+        align-content: center;
+      }
+
+      #navbar {
+        grid-column: 1 / -1; /* Navbar spans all columns */
+        margin-top: 5%; /* Adjusted margin-top */
+        text-align: center;
+      }
+
+      a {
+        color: green; /* Change color to green on hover */
+        text-decoration: underline; /* Add underline on hover */
+      }
+
+      a:hover {
+        color: white;
+        text-decoration: none;
+      }
+
+      h1 {
+        font-size: 24px;
+        grid-column: 3; /* Title centered in the third column */
+        text-align: center; /* Left align title */
+      }
+
+      h4 {
+        grid-column: 3; /* Title centered in the third column */
+        text-align: center; /* Left align title */
+      }
+
+      #content {
+        margin-top: 10%;
+        grid-column: 3; /* Content spans from the second to the fifth column */
+        text-align: left; /* Left align content */
+      }
+
+      #vintage-image {
+        margin-top: 20px;
+        grid-column: 3; /* Center image in the third column */
+        text-align: center; /* Left align content */
+      }
+
+      #vintage-image img {
+        width: 60%; /* Set image width to 20% of its container */
+        opacity: 60%;
+      }
+
+      #footer {
+        background-color: #191919; /* Dark gray background */
+        color: white;
+        padding: 20px;
+        grid-column: 1 / -1; /* Footer spans all columns */
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      /* Media Query for smaller screens */
+      @media only screen and (max-width: 600px) {
+        h1 {
+          font-size: 30px; /* Increase font size for smaller screens */
+        }
+        #content {
+          margin-top: 10%;
+          grid-column: 2 / 5; /* Content spans from the second to the fifth column */
+          text-align: left; /* Left align content */
+        }
+        #navbar {
+          margin-top: 40px;
+        }
+        #vintage-image {
+          position: fixed; /* Fixed position for the image */
+          bottom: 13%; /* Adjust the position to your preference */
+          left: 0;
+          right: 0;
+          margin: 0 auto; /* Center the image horizontally */
+          z-index: 0; /* Ensure the image stays above the footer */
+        }
+        #vintage-image img {
+          width: 60%; /* Set image width to 100% */
+          opacity: 70%;
+        }
+      }
+
+      /* Media Query for smaller screens */
+      @media only screen and (max-width: 400px) {
+        h1 {
+          font-size: 30px; /* Increase font size for smaller screens */
+        }
+        #vintage-image {
+          position: fixed; /* Fixed position for the image */
+          bottom: 10%; /* Adjust the position to your preference */
+          left: 0;
+          right: 0;
+          margin: 0 auto; /* Center the image horizontally */
+          z-index: 0; /* Ensure the image stays above the footer */
+        }
+        #vintage-image img {
+          width: 60%; /* Set image width to 100% */
+          opacity: 30%;
+        }
+        #footer {
+          height: 5%;
+        }
+        #footer text {
+          vertical-align: middle;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <a href="#">home</a> / <a href="#">blog</a> /
+      <a href="#"> ask</a>
+    </div>
+    <div id="content">
+      <h1>Welcome</h1>
+      <h4>
+        My name is <a href="https://github.com/hacendaddy">pablo</a> and this is
+        my portfolio.
+      </h4>
+      <p>
+        I'm a dedicated Data Science student with a passion for machine learning
+        algorithms.
+        <br /><br />
+        When I'm not studying, you can often find me watching anime, reading, or
+        hitting the gym / swimming. I believe in the power of continuous
+        improvement and the transformative impact it can have on both body and
+        mind. <br /><br />I'm excited to embark on new projects and
+        collaborations.
+      </p>
+    </div>
+    <div id="vintage-image">
+      <img
+        src="D:\Imagenes\anime\ead19624656a731b9b1bd60ddc84cd24-removebg-preview.png"
+        alt="Main image"
+      />
+    </div>
+    <div id="footer">
+      <p>
+        &copy; 1990 -
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </p>
+      <p>Created with <3 using HTML and CSS</p>
+    </div>
+  </body>
+</html>
